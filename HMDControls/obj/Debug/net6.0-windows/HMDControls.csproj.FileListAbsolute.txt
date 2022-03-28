@@ -1,0 +1,14 @@
+D:\GitHub\HMDControls\HMDControls\bin\Debug\net6.0-windows\HMDControls.deps.json
+D:\GitHub\HMDControls\HMDControls\bin\Debug\net6.0-windows\HMDControls.dll
+D:\GitHub\HMDControls\HMDControls\bin\Debug\net6.0-windows\HMDControls.pdb
+D:\GitHub\HMDControls\HMDControls\obj\Debug\net6.0-windows\HMDControls.csproj.AssemblyReference.cache
+D:\GitHub\HMDControls\HMDControls\obj\Debug\net6.0-windows\HMDControls.BaseForm.resources
+D:\GitHub\HMDControls\HMDControls\obj\Debug\net6.0-windows\HMDControls.csproj.GenerateResource.cache
+D:\GitHub\HMDControls\HMDControls\obj\Debug\net6.0-windows\HMDControls.GeneratedMSBuildEditorConfig.editorconfig
+D:\GitHub\HMDControls\HMDControls\obj\Debug\net6.0-windows\HMDControls.AssemblyInfoInputs.cache
+D:\GitHub\HMDControls\HMDControls\obj\Debug\net6.0-windows\HMDControls.AssemblyInfo.cs
+D:\GitHub\HMDControls\HMDControls\obj\Debug\net6.0-windows\HMDControls.csproj.CoreCompileInputs.cache
+D:\GitHub\HMDControls\HMDControls\obj\Debug\net6.0-windows\HMDControls.dll
+D:\GitHub\HMDControls\HMDControls\obj\Debug\net6.0-windows\refint\HMDControls.dll
+D:\GitHub\HMDControls\HMDControls\obj\Debug\net6.0-windows\HMDControls.pdb
+D:\GitHub\HMDControls\HMDControls\obj\Debug\net6.0-windows\ref\HMDControls.dll
