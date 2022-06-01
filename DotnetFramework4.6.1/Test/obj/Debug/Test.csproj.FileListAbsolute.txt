@@ -1,0 +1,14 @@
+D:\GitHub\HMDControls\DotnetFramework4.6.1\Test\bin\Debug\Test.exe.config
+D:\GitHub\HMDControls\DotnetFramework4.6.1\Test\bin\Debug\Test.exe
+D:\GitHub\HMDControls\DotnetFramework4.6.1\Test\bin\Debug\Test.pdb
+D:\GitHub\HMDControls\DotnetFramework4.6.1\Test\bin\Debug\HMDControls.dll
+D:\GitHub\HMDControls\DotnetFramework4.6.1\Test\bin\Debug\HMDControls.pdb
+D:\GitHub\HMDControls\DotnetFramework4.6.1\Test\obj\Debug\Test.csproj.AssemblyReference.cache
+D:\GitHub\HMDControls\DotnetFramework4.6.1\Test\obj\Debug\Test.csproj.SuggestedBindingRedirects.cache
+D:\GitHub\HMDControls\DotnetFramework4.6.1\Test\obj\Debug\Test.Properties.Resources.resources
+D:\GitHub\HMDControls\DotnetFramework4.6.1\Test\obj\Debug\Test.csproj.GenerateResource.cache
+D:\GitHub\HMDControls\DotnetFramework4.6.1\Test\obj\Debug\Test.csproj.CoreCompileInputs.cache
+D:\GitHub\HMDControls\DotnetFramework4.6.1\Test\obj\Debug\Test.csproj.CopyComplete
+D:\GitHub\HMDControls\DotnetFramework4.6.1\Test\obj\Debug\Test.exe
+D:\GitHub\HMDControls\DotnetFramework4.6.1\Test\obj\Debug\Test.pdb
+D:\GitHub\HMDControls\DotnetFramework4.6.1\Test\obj\Debug\Test.Form1.resources

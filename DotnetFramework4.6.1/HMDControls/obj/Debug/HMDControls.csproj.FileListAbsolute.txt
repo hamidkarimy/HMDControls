@@ -1,0 +1,8 @@
+D:\GitHub\HMDControls\DotnetFramework4.6.1\HMDControls\obj\Debug\HMDControls.csproj.AssemblyReference.cache
+D:\GitHub\HMDControls\DotnetFramework4.6.1\HMDControls\obj\Debug\HMDControls.BaseForm.resources
+D:\GitHub\HMDControls\DotnetFramework4.6.1\HMDControls\obj\Debug\HMDControls.csproj.GenerateResource.cache
+D:\GitHub\HMDControls\DotnetFramework4.6.1\HMDControls\obj\Debug\HMDControls.csproj.CoreCompileInputs.cache
+D:\GitHub\HMDControls\DotnetFramework4.6.1\HMDControls\bin\Debug\HMDControls.dll
+D:\GitHub\HMDControls\DotnetFramework4.6.1\HMDControls\bin\Debug\HMDControls.pdb
+D:\GitHub\HMDControls\DotnetFramework4.6.1\HMDControls\obj\Debug\HMDControls.dll
+D:\GitHub\HMDControls\DotnetFramework4.6.1\HMDControls\obj\Debug\HMDControls.pdb

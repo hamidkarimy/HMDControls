@@ -1,0 +1,53 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "HMDControls/1.0.0": {
+        "dependencies": {
+          "intelika.fontAwesome": "1.0.0.0",
+          "WinForm.MaterialIcon": "1.0.0.0"
+        },
+        "runtime": {
+          "HMDControls.dll": {}
+        }
+      },
+      "intelika.fontAwesome/1.0.0.0": {
+        "runtime": {
+          "intelika.fontAwesome.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "WinForm.MaterialIcon/1.0.0.0": {
+        "runtime": {
+          "WinForm.MaterialIcon.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "HMDControls/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "intelika.fontAwesome/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "WinForm.MaterialIcon/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
