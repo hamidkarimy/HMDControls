@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HMDControls
+namespace HMDControls.Enums
 {
-    public enum buttonText
+    public enum HMDBorderStyle
     {
-        havij,
-        mamad,
-        hasan
+        None,
+        Flat,
+        UnderOnly
     }
 }

@@ -32,3 +32,4 @@ D:\GitHub\HMDControls\Dotnet6\HMDControls\obj\Debug\net6.0-windows\HMDControls.d
 D:\GitHub\HMDControls\Dotnet6\HMDControls\obj\Debug\net6.0-windows\refint\HMDControls.dll
 D:\GitHub\HMDControls\Dotnet6\HMDControls\obj\Debug\net6.0-windows\HMDControls.pdb
 D:\GitHub\HMDControls\Dotnet6\HMDControls\obj\Debug\net6.0-windows\ref\HMDControls.dll
+D:\GitHub\HMDControls\Dotnet6\HMDControls\obj\Debug\net6.0-windows\HMDControls.Controls.HMDTextbox.resources

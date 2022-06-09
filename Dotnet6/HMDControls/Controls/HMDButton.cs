@@ -4,7 +4,7 @@ using System.ComponentModel;
 using System.Diagnostics;
 using System.Windows.Forms.Design;
 
-namespace HMDControls
+namespace HMDControls.Controls
 {   
     public class HMDButton : Button, IHMDControl
     {

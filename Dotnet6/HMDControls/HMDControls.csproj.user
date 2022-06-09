@@ -5,11 +5,26 @@
     <Compile Update="BaseForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="HMDButton.cs">
+    <Compile Update="Controls\HMDButton.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Update="ThemeDefine\HMDTextbox.cs">
+    <Compile Update="Controls\HMDCheckBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Controls\HMDComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Controls\HMDProgressBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Controls\HMDRadioButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Controls\HMDTextbox.cs">
       <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Controls\HMDTooltip.cs">
+      <SubType>Component</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
