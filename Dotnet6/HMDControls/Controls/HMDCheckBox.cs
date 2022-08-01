@@ -11,6 +11,39 @@ namespace HMDControls.Controls
     {
         public ThemeColor ThemeColor { get; set; }
         public ThemeMode ThemeMode { get; set; }
+        public bool Checked
+        {
+            get
+            {
+                return base.Checked;
+            }
+            set
+            {
+                StaticHelper.InvokeIfRequired(() => base.Checked = value, this);
+            }
+        }
+        public bool Enabled
+        {
+            get
+            {
+                return base.Enabled;
+            }
+            set
+            {
+                StaticHelper.InvokeIfRequired(() => base.Enabled = value, this);
+            }
+        }
+        public bool Visible
+        {
+            get
+            {
+                return base.Visible;
+            }
+            set
+            {
+                StaticHelper.InvokeIfRequired(() => base.Visible = value, this);
+            }
+        }
         public HMDCheckBox()
         {
             this.MinimumSize = new Size(0, 21);

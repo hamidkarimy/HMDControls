@@ -20,7 +20,6 @@ D:\GitHub\HMDControls\Dotnet6\HMDControls\bin\Debug\net6.0-windows\WinForm.Mater
 D:\GitHub\HMDControls\Dotnet6\HMDControls\bin\Debug\net6.0-windows\intelika.fontAwesome.pdb
 D:\GitHub\HMDControls\Dotnet6\HMDControls\bin\Debug\net6.0-windows\WinForm.MaterialIcon.pdb
 D:\GitHub\HMDControls\Dotnet6\HMDControls\obj\Debug\net6.0-windows\HMDControls.csproj.AssemblyReference.cache
-D:\GitHub\HMDControls\Dotnet6\HMDControls\obj\Debug\net6.0-windows\HMDControls.BaseForm.resources
 D:\GitHub\HMDControls\Dotnet6\HMDControls\obj\Debug\net6.0-windows\HMDControls.Properties.Resources.resources
 D:\GitHub\HMDControls\Dotnet6\HMDControls\obj\Debug\net6.0-windows\HMDControls.csproj.GenerateResource.cache
 D:\GitHub\HMDControls\Dotnet6\HMDControls\obj\Debug\net6.0-windows\HMDControls.GeneratedMSBuildEditorConfig.editorconfig
@@ -32,4 +31,6 @@ D:\GitHub\HMDControls\Dotnet6\HMDControls\obj\Debug\net6.0-windows\HMDControls.d
 D:\GitHub\HMDControls\Dotnet6\HMDControls\obj\Debug\net6.0-windows\refint\HMDControls.dll
 D:\GitHub\HMDControls\Dotnet6\HMDControls\obj\Debug\net6.0-windows\HMDControls.pdb
 D:\GitHub\HMDControls\Dotnet6\HMDControls\obj\Debug\net6.0-windows\ref\HMDControls.dll
+D:\GitHub\HMDControls\Dotnet6\HMDControls\obj\Debug\net6.0-windows\HMDControls.Controls.HMDMarquee.resources
+D:\GitHub\HMDControls\Dotnet6\HMDControls\obj\Debug\net6.0-windows\HMDControls.HMDBaseForm.resources
 D:\GitHub\HMDControls\Dotnet6\HMDControls\obj\Debug\net6.0-windows\HMDControls.Controls.HMDTextbox.resources

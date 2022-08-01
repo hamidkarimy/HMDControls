@@ -10,7 +10,41 @@ namespace HMDControls.Controls
     {
         ThemeMode mode;
         ThemeColor color;
-        NormalIconType  icon;
+        NormalIconType  icon;       
+        public bool Enabled
+        {
+            get
+            {
+                return base.Enabled;
+            }
+            set
+            {
+                StaticHelper.InvokeIfRequired(() => base.Enabled = value, this);
+            }
+        }
+        public bool Visible
+        {
+            get
+            {
+                return base.Visible;
+            }
+            set
+            {
+                StaticHelper.InvokeIfRequired(() => base.Visible = value, this);
+            }
+        }
+        public string Text
+        {
+            get
+            {
+                return base.Text;
+            }
+            set
+            {
+                StaticHelper.InvokeIfRequired(() => base.Text = value, this);
+            }
+        }
+
         [Category("Appearance")]
         [Description("Choose Theme Mode.")]
         public ThemeMode ThemeMode
@@ -21,9 +55,13 @@ namespace HMDControls.Controls
             }
             set
             {
-                mode = value;
-                Theme.Mode = value;  
-                Refresh();
+                StaticHelper.InvokeIfRequired(() =>
+                {
+                    mode = value;
+                    Theme.Mode = value;
+                    Refresh();
+                }, this);
+                
             }
 
         }
@@ -37,13 +75,16 @@ namespace HMDControls.Controls
             }
             set
             {
-                color = value;
-                Theme.Color = value;
-                Refresh();
+                StaticHelper.InvokeIfRequired(() =>
+                {
+                    color = value;
+                    Theme.Color = value;
+                    Refresh();
+                }, this);
+               
             }
 
         }
-
 
         [Category("Appearance")]
         [Description("Choose Icon.")]
@@ -55,10 +96,12 @@ namespace HMDControls.Controls
             }
             set
             {
-                icon = value;
-                Image = Icons.RegularIcon.GetImage(icon, color: Color.White, size: 32);                
-                Refresh();
-
+                StaticHelper.InvokeIfRequired(() =>
+                {
+                    icon = value;
+                    Image = Icons.RegularIcon.GetImage(icon, color: Color.White, size: 32);
+                    Refresh();
+                }, this);
             }
         }
         public override Color BackColor

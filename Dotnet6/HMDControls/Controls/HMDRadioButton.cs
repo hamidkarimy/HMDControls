@@ -1,6 +1,7 @@
 ﻿using HMDControls.ThemeDefine;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,8 +10,73 @@ namespace HMDControls.Controls
 {
     public class HMDRadioButton : RadioButton, IHMDControl
     {
-        public ThemeColor ThemeColor { get; set; }
-        public ThemeMode ThemeMode { get; set; }
+        ThemeMode mode;
+        ThemeColor color;
+        [Category("Appearance")]
+        [Description("Choose Theme Mode.")]
+        public ThemeMode ThemeMode
+        {
+            get
+            {
+                return mode;
+            }
+            set
+            {
+                mode = value;
+                Theme.Mode = value;
+                Refresh();
+            }
+
+        }
+        
+        public bool Checked { 
+            get
+            {
+                return base.Checked;
+            }
+            set
+            {
+                StaticHelper.InvokeIfRequired(()=>base.Checked=value,this);
+            }
+        }
+        public bool Enabled
+        {
+            get
+            {
+                return base.Enabled;
+            }
+            set
+            {
+                StaticHelper.InvokeIfRequired(() => base.Enabled = value, this);
+            }
+        }
+        public bool Visible
+        {
+            get
+            {
+                return base.Visible;
+            }
+            set
+            {
+                StaticHelper.InvokeIfRequired(() => base.Visible = value, this);
+            }
+        }
+        [Category("Appearance")]
+        [Description("Choose Theme Color.")]
+        public ThemeColor ThemeColor
+        {
+            get
+            {
+                return color;
+            }
+            set
+            {
+                color = value;
+                Theme.Color = value;
+                Refresh();
+            }
+
+        }
 
         public HMDRadioButton()
         {

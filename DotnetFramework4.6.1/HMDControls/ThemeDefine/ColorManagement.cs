@@ -28,7 +28,7 @@ namespace HMDControls.ThemeDefine
                         Theme.ForeColor = Color.FromArgb(243, 67, 67); 
                         Theme.ForeColorAccent = Color.FromArgb(65, 161, 217);
                         Theme.ForeColorAccent1 = Color.FromArgb(85, 50, 45);
-                        Theme.ForeColorDisable = Color.FromArgb(48, 28, 25);
+                        Theme.ForeColorDisable = Color.FromArgb(230, 152, 142);
                         break;
                     }
                 case ThemeColor.Green:
@@ -37,7 +37,7 @@ namespace HMDControls.ThemeDefine
                         Theme.ForeColor = Color.FromArgb(82, 172, 64); 
                         Theme.ForeColorAccent = Color.FromArgb(36, 60, 36);
                         Theme.ForeColorAccent1 = Color.FromArgb(20, 34, 20);
-                        Theme.ForeColorDisable = Color.FromArgb(107, 129, 107);
+                        Theme.ForeColorDisable = Color.FromArgb(169, 214, 169);
                         break;
                     }
                 case ThemeColor.Blue:
@@ -70,7 +70,7 @@ namespace HMDControls.ThemeDefine
                         Theme.TextColor = Color.White;
                         Theme.ForeColorAccent = Theme.BackColorMain;
                         Theme.ForeColorAccent1 = Color.FromArgb(40, 46, 51);
-                        Theme.ForeColor = Color.FromArgb(40, 46, 51);
+                        //Theme.ForeColor = Color.FromArgb(40, 46, 51);
                         Theme.ForeColorDisable = Color.FromArgb(141, 147, 158);
                         break;
                     }

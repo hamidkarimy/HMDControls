@@ -14,12 +14,32 @@ using System.Windows.Forms;
 
 namespace HMDControls.Controls
 {
+
     public partial class HMDTextbox : UserControl, IHMDControl
     {
         public HMDTextbox()
         {
             InitializeComponent();
         }
+
+
+        #region test
+        public bool Enabled {
+            get
+            {
+                return base.Enabled;
+            }
+            set
+            {
+               StaticHelper.InvokeIfRequired(()=>base.Enabled=value,this);
+            }
+        }
+
+        
+        #endregion
+
+
+
 
 
         ThemeMode mode;
@@ -59,9 +79,10 @@ namespace HMDControls.Controls
             }
             set
             {
-                mode = value;
-                Theme.Mode = value;
-                Refresh();
+                StaticHelper.InvokeIfRequired(() => { 
+                    mode = value; 
+                    Refresh();  
+                },this);                
             }
 
         }
@@ -75,9 +96,10 @@ namespace HMDControls.Controls
             }
             set
             {
-                color = value;
-                Theme.Color = value;
-                Refresh();
+                StaticHelper.InvokeIfRequired(() => {
+                    color = value;
+                    Refresh();
+                },this);
             }
 
         }
@@ -93,18 +115,19 @@ namespace HMDControls.Controls
             }
             set
             {
-                icon = value;
-                if (icon == NormalIconType.None)
-                {
-                    pictureBox1.Visible = false;
-                }
-                else
-                {
-                    pictureBox1.Visible = true;
-                    pictureBox1.Image = Icons.RegularIcon.GetImage(icon, color: Theme.ForeColorDisable, size: 16);
-                }
-                Refresh();
-
+                StaticHelper.InvokeIfRequired(() => {
+                    icon = value;
+                    if (icon == NormalIconType.None)
+                    {
+                        StaticHelper.InvokeIfRequired(() => pictureBox1.Visible = false, pictureBox1);   
+                    }
+                    else
+                    {
+                        StaticHelper.InvokeIfRequired(() => pictureBox1.Visible = true, pictureBox1);
+                        pictureBox1.Image = Icons.RegularIcon.GetImage(icon, color: Theme.ForeColorDisable, size: 16);
+                    }
+                    Refresh();
+                },this);
             }
         }
         public override Color BackColor
@@ -137,8 +160,12 @@ namespace HMDControls.Controls
             }
             set
             {
-                textBox1.Multiline = value;
-                multiline = value;
+                StaticHelper.InvokeIfRequired(() =>
+                {
+                    StaticHelper.InvokeIfRequired(() => textBox1.Multiline = value, textBox1);
+                    multiline = value;
+                }, this);
+                
             }
         }
         public bool IsPassword
@@ -149,7 +176,7 @@ namespace HMDControls.Controls
                 return isPassword;
             }
             set
-            {
+            { 
                 textBox1.UseSystemPasswordChar = value;
                 isPassword = value;
             }
@@ -163,8 +190,11 @@ namespace HMDControls.Controls
             }
             set
             {
-                textBox1.PlaceholderText = value;
-                label = value;
+                StaticHelper.InvokeIfRequired(() =>
+                {
+                    StaticHelper.InvokeIfRequired(() => textBox1.PlaceholderText = value, textBox1);
+                    label = value;
+                }, this);
             }
         }
         public bool ReadOnly
@@ -176,8 +206,11 @@ namespace HMDControls.Controls
             }
             set
             {
-                textBox1.ReadOnly = value;
-                readOnly = value;
+                StaticHelper.InvokeIfRequired(() =>
+                {
+                    StaticHelper.InvokeIfRequired(() => textBox1.ReadOnly = value, textBox1);
+                    readOnly = value;
+                }, this);
             }
         }
         public ScrollBars Scrollbars
@@ -199,15 +232,17 @@ namespace HMDControls.Controls
         {
             get
             {
-                text = textBox1.Text;
                 return text;
             }
             set
             {
-                textBox1.Text = value;
-                text = value;
+                StaticHelper.InvokeIfRequired(() =>
+                {
+                    StaticHelper.InvokeIfRequired(() => textBox1.Text = value, textBox1);
+                    text = value;
+                }, this);
             }
-        }
+        }       
         [Browsable(false)]
         public bool HasError
         {
@@ -217,28 +252,33 @@ namespace HMDControls.Controls
             }
             set
             {
-                hasError = value;
+                StaticHelper.InvokeIfRequired(() =>
+                { hasError = value;
                 if (hasError)
                 {
-                    pictureBox1.Image = Icons.RegularIcon.GetImage(NormalIconType.exclamation_square, color: Theme.ErrorColor, size: 16);
-                    pictureBox1.Visible = true;
+                        StaticHelper.InvokeIfRequired(() => { 
+                            pictureBox1.Image = Icons.RegularIcon.GetImage(NormalIconType.exclamation_square, color: Theme.ErrorColor, size: 16);
+                            pictureBox1.Visible = true;
+                        }, pictureBox1);
                     setSize();
                 }
                 else
                 {
                     if (icon != NormalIconType.None)
                     {
-                       
-                            pictureBox1.Image = Icons.RegularIcon.GetImage(icon, color: Theme.ForeColorDisable, size: 16);
-                        pictureBox1.Visible=true;
+                            StaticHelper.InvokeIfRequired(() => {
+                                pictureBox1.Image = Icons.RegularIcon.GetImage(icon, color: Theme.ForeColorDisable, size: 16);
+                                pictureBox1.Visible = true;
+                            }, pictureBox1);
                     }
                     else
                     {
-                        pictureBox1.Visible = false;
+                            StaticHelper.InvokeIfRequired(() => pictureBox1.Visible = false,pictureBox1);
                     }
                 }
-                
+
                 Refresh();
+            },this);
             }
         }
         public string ErrorMessage { get => errorMessage; set => errorMessage = value; }
@@ -384,5 +424,6 @@ namespace HMDControls.Controls
             tt.ForeColor = Color.White;
             tt.Show(errorMessage, pictureBox1);
         }
+
     }
 }

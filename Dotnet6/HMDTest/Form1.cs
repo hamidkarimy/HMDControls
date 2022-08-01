@@ -1,4 +1,6 @@
 ﻿using HMDControls;
+using HMDControls.Controls;
+using intelika.fontAwesome;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,67 +13,49 @@ using System.Windows.Forms;
 
 namespace HMDTest
 {
-    public partial class Form1 : BaseForm
+    public partial class Form1 :HMDBaseForm
     {
         public Form1()
         {
             InitializeComponent();
         }
-
         private void hmdButton1_Click(object sender, EventArgs e)
         {
-            ActiveWaitingProgress();
-            backgroundWorker1.RunWorkerAsync();
+            LoadData( setProgress,"nafas");
         }
 
         private void Form1_Load(object sender, EventArgs e)
-        {
-
-            ActiveWaitingProgress();
-            backgroundWorker1.RunWorkerAsync();
+        {                  
         }
 
-        private void ActiveWaitingProgress()
+        private void setProgress(string text)
         {
-            foreach (Control control in this.Controls)
-            {
-                if (control.GetType()!=typeof(ProgressBar))
-                {
-                    control.Visible = false;
-                }
-            }
-            hmdProgressBar1.Show();
-            progressBar1.Show();
-            hmdProgressBar1.Value = 0;
-        }
-        private void DeActiveWaitingProgress()
-        {
-            foreach (Control control in this.Controls)
-            {
-                if (control.GetType() != typeof(ProgressBar))
-                {
-                    control.Visible = true;
-                }
-            }
-            hmdProgressBar1.Hide();
-            progressBar1.Hide();
-        }
-
-        private void setProgress()
-        {
-            for (int i = 0; i < 100; i++)
+            for (int i = 0; i < 50; i++)
             {
                 Thread.Sleep(50);
                 //backgroundWorker1.ReportProgress(i + 1);
             }
-            
+            ChangeWaitingStatus(NormalIconType.search, "در حال جستجو");
+            for (int i = 0; i < 50; i++)
+            {
+                Thread.Sleep(50);
+                //backgroundWorker1.ReportProgress(i + 1);
+            }
+            ChangeWaitingStatus(NormalIconType.fingerprint, "احراز هویت ...");
+            for (int i = 0; i < 50; i++)
+            {
+                Thread.Sleep(50);
+                //backgroundWorker1.ReportProgress(i + 1);
+            }
+            hmdTextbox1.Text = text.ToString();
+
+            hmdTextbox1.Icon = intelika.fontAwesome.NormalIconType.search;
         }
 
-        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
+        private int  GetPow(int a)
         {
-            setProgress();           
+            return a * a;
         }
-
         private void rbRed_CheckedChanged(object sender, EventArgs e)
         {
             if (rbRed.Checked)
@@ -86,30 +70,35 @@ namespace HMDTest
             {
                 ThemeColor = HMDControls.ThemeDefine.ThemeColor.Green;
             }
+            panel1.BackColor = Theme.ForeColor;
+            panel2.BackColor = Theme.ForeColorAccent;
+            panel3.BackColor = Theme. ForeColorAccent1;
+            panel4.BackColor = Theme.ForeColorDisable;
+            panel5.BackColor = Theme.TextColor;
+            panel6.BackColor = Theme.BackColorMain;
+            panel7.BackColor = Theme.BackColorAccent;
+            panel8.BackColor = Theme.BackColorAccent2;
             Refresh();
+        }
+
+        private void hmdButton2_Click(object sender, EventArgs e)
+        {
+            var a = hmdTextbox1.Enabled;
+            MessageBox.Show(hmdTextbox1.Text);
+            // var a =(int) LoadData1(4.);
         }
 
         private void hmdCheckBox1_CheckedChanged(object sender, EventArgs e)
         {
-            if (hmdCheckBox1.Checked)
+            if (Theme.Mode==HMDControls.ThemeDefine.ThemeMode.Light)
             {
-                ThemeMode = HMDControls.ThemeDefine.ThemeMode.Dark;
+                Theme.Mode = HMDControls.ThemeDefine.ThemeMode.Dark;
             }
             else
             {
-                ThemeMode = HMDControls.ThemeDefine.ThemeMode.Light;
+                Theme.Mode = HMDControls.ThemeDefine.ThemeMode.Light;
             }
             Refresh();
-        }
-
-        private void backgroundWorker1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
-        {
-            DeActiveWaitingProgress();
-        }
-
-        private void backgroundWorker1_ProgressChanged(object sender, ProgressChangedEventArgs e)
-        {
-            ++hmdProgressBar1.Value;
         }
     }
 }

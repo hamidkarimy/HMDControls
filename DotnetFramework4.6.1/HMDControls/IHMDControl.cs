@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace HMDControls
 {
-    internal interface IHMDControl
+    public interface IHMDControl
     {
          ThemeColor ThemeColor { get; set; }
          ThemeMode ThemeMode { get; set; }

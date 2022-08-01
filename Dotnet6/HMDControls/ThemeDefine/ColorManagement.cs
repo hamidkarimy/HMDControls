@@ -69,7 +69,7 @@ namespace HMDControls.ThemeDefine
                         Theme.TextColor = Color.White;
                         Theme.ForeColorAccent = Theme.BackColorMain;
                         Theme.ForeColorAccent1 = Color.FromArgb(40, 46, 51);
-                        Theme.ForeColor = Color.FromArgb(40, 46, 51);
+                        //Theme.ForeColor = Color.FromArgb(40, 46, 51);
                         Theme.ForeColorDisable = Color.FromArgb(141, 147, 158);
                         break;
                     }

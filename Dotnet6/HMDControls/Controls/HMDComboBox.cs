@@ -11,6 +11,39 @@ namespace HMDControls.Controls
 {
     public class HMDComboBox:ComboBox,IHMDControl
     {
+        public bool Enabled
+        {
+            get
+            {
+                return base.Enabled;
+            }
+            set
+            {
+                StaticHelper.InvokeIfRequired(() => base.Enabled = value, this);            
+            }
+        }
+        public object DataSource
+        {
+            get
+            {
+                return base.DataSource;
+            }
+            set
+            {
+                StaticHelper.InvokeIfRequired(() => base.DataSource = value, this);
+            }
+        }
+        public bool Visible
+        {
+            get
+            {
+                return base.Visible;
+            }
+            set
+            {
+                StaticHelper.InvokeIfRequired(() => base.Visible = value, this);
+            }
+        }
         public Color BorderColor
         {
             get { return Theme.ForeColor; }            
@@ -31,8 +64,11 @@ namespace HMDControls.Controls
             }
             set
             {
-                backColor = value;
-                Refresh();
+                StaticHelper.InvokeIfRequired(()=>
+               {
+                   backColor = value;
+                   Refresh();
+               },this);
             }
         }
         //{ get => Theme.BackColorMain;set => Theme.BackColorMain; }
@@ -41,9 +77,12 @@ namespace HMDControls.Controls
         public ThemeColor ThemeColor {
             get { 
                 return themeColor; 
-            } set { 
-                themeColor = value;
-                Refresh();
+            } set {
+                StaticHelper.InvokeIfRequired(() =>
+                {
+                    themeColor = value;
+                    Refresh();
+                }, this);
             }
         }
         public ThemeMode ThemeMode {
@@ -53,8 +92,11 @@ namespace HMDControls.Controls
             }
             set
             {
-                themeMode = value;
-                Refresh();
+                StaticHelper.InvokeIfRequired(() =>
+                {
+                    themeMode = value;
+                    Refresh();
+                }, this);
             }
         }
 

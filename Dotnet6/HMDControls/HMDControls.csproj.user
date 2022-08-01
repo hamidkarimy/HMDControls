@@ -2,9 +2,6 @@
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup />
   <ItemGroup>
-    <Compile Update="BaseForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="Controls\HMDButton.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -13,6 +10,12 @@
     </Compile>
     <Compile Update="Controls\HMDComboBox.cs">
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Controls\HMDDataGridView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Controls\HMDMarquee.cs">
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="Controls\HMDProgressBar.cs">
       <SubType>Component</SubType>
@@ -25,6 +28,9 @@
     </Compile>
     <Compile Update="Controls\HMDTooltip.cs">
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="HMDBaseForm.cs">
+      <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>

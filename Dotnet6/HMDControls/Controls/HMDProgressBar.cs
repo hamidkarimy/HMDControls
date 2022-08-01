@@ -24,6 +24,7 @@ namespace HMDControls.Controls
         private bool paintedBack=false;
         private bool stopPainting=false;
         private ProgressBarTextPosition showValue = ProgressBarTextPosition.Right;
+
         [Category("Appearance")]
         public ThemeColor ThemeColor { get; set; }
         [Category("Appearance")]
@@ -115,6 +116,8 @@ namespace HMDControls.Controls
             }
 
         }
+
+
 
         protected override void OnPaint(PaintEventArgs e)
         {
