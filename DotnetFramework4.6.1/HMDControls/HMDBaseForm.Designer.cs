@@ -2,7 +2,7 @@
 
 namespace HMDControls
 {
-    partial class HMDBaseForm<T> where T : class
+    partial class HMDBaseForm
     {
         /// <summary>
         /// Required designer variable.

@@ -85,7 +85,7 @@ namespace Test
             this.rbRed.Location = new System.Drawing.Point(599, 116);
             this.rbRed.MinimumSize = new System.Drawing.Size(0, 18);
             this.rbRed.Name = "rbRed";
-            this.rbRed.Size = new System.Drawing.Size(52, 18);
+            this.rbRed.Size = new System.Drawing.Size(54, 18);
             this.rbRed.TabIndex = 2;
             this.rbRed.TabStop = true;
             this.rbRed.Text = "red";
@@ -100,7 +100,7 @@ namespace Test
             this.rbGreen.Location = new System.Drawing.Point(587, 154);
             this.rbGreen.MinimumSize = new System.Drawing.Size(0, 18);
             this.rbGreen.Name = "rbGreen";
-            this.rbGreen.Size = new System.Drawing.Size(64, 18);
+            this.rbGreen.Size = new System.Drawing.Size(67, 18);
             this.rbGreen.TabIndex = 2;
             this.rbGreen.TabStop = true;
             this.rbGreen.Text = "green";
@@ -115,9 +115,11 @@ namespace Test
             this.hmdTextbox1.BorderSize = 0;
             this.hmdTextbox1.BoxDecoration = HMDControls.Enums.HMDBorderStyle.Flat;
             this.hmdTextbox1.ErrorMessage = null;
+            this.hmdTextbox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.hmdTextbox1.HasError = false;
             this.hmdTextbox1.Icon = intelika.fontAwesome.NormalIconType.None;
             this.hmdTextbox1.IsPassword = false;
+            this.hmdTextbox1.IsPlaceHolder = false;
             this.hmdTextbox1.IsRequired = false;
             this.hmdTextbox1.Location = new System.Drawing.Point(8, 36);
             this.hmdTextbox1.Margin = new System.Windows.Forms.Padding(0);
@@ -125,12 +127,14 @@ namespace Test
             this.hmdTextbox1.Multiline = false;
             this.hmdTextbox1.Name = "hmdTextbox1";
             this.hmdTextbox1.Padding = new System.Windows.Forms.Padding(5);
+            this.hmdTextbox1.PlaceHolder = "";
             this.hmdTextbox1.ReadOnly = false;
             this.hmdTextbox1.Scrollbars = System.Windows.Forms.ScrollBars.None;
-            this.hmdTextbox1.Size = new System.Drawing.Size(164, 37);
+            this.hmdTextbox1.Size = new System.Drawing.Size(164, 33);
             this.hmdTextbox1.TabIndex = 4;
             this.hmdTextbox1.ThemeColor = HMDControls.ThemeDefine.ThemeColor.Default;
             this.hmdTextbox1.ThemeMode = HMDControls.ThemeDefine.ThemeMode.Default;
+            this.hmdTextbox1.ValueType = HMDControls.Controls.TextBoxType.String;
             // 
             // hmdCheckBox1
             // 
@@ -138,7 +142,7 @@ namespace Test
             this.hmdCheckBox1.Location = new System.Drawing.Point(539, 69);
             this.hmdCheckBox1.MinimumSize = new System.Drawing.Size(0, 18);
             this.hmdCheckBox1.Name = "hmdCheckBox1";
-            this.hmdCheckBox1.Size = new System.Drawing.Size(112, 18);
+            this.hmdCheckBox1.Size = new System.Drawing.Size(115, 18);
             this.hmdCheckBox1.TabIndex = 6;
             this.hmdCheckBox1.Text = "hmdCheckBox1";
             this.hmdCheckBox1.ThemeColor = HMDControls.ThemeDefine.ThemeColor.Default;
@@ -163,7 +167,7 @@ namespace Test
             this.rbBlue.Location = new System.Drawing.Point(594, 199);
             this.rbBlue.MinimumSize = new System.Drawing.Size(0, 18);
             this.rbBlue.Name = "rbBlue";
-            this.rbBlue.Size = new System.Drawing.Size(57, 18);
+            this.rbBlue.Size = new System.Drawing.Size(60, 18);
             this.rbBlue.TabIndex = 2;
             this.rbBlue.TabStop = true;
             this.rbBlue.Text = "blue";
@@ -325,7 +329,7 @@ namespace Test
             this.checkBox1.AutoSize = true;
             this.checkBox1.Location = new System.Drawing.Point(424, 69);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(80, 17);
+            this.checkBox1.Size = new System.Drawing.Size(79, 17);
             this.checkBox1.TabIndex = 14;
             this.checkBox1.Text = "checkBox1";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -335,7 +339,7 @@ namespace Test
             this.radioButton1.AutoSize = true;
             this.radioButton1.Location = new System.Drawing.Point(587, 233);
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(85, 17);
+            this.radioButton1.Size = new System.Drawing.Size(93, 17);
             this.radioButton1.TabIndex = 15;
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "radioButton1";
@@ -369,6 +373,26 @@ namespace Test
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.Controls.SetChildIndex(this.hmdButton1, 0);
+            this.Controls.SetChildIndex(this.rbRed, 0);
+            this.Controls.SetChildIndex(this.rbGreen, 0);
+            this.Controls.SetChildIndex(this.rbBlue, 0);
+            this.Controls.SetChildIndex(this.hmdTextbox1, 0);
+            this.Controls.SetChildIndex(this.hmdCheckBox1, 0);
+            this.Controls.SetChildIndex(this.hmdComboBox1, 0);
+            this.Controls.SetChildIndex(this.panel1, 0);
+            this.Controls.SetChildIndex(this.panel2, 0);
+            this.Controls.SetChildIndex(this.panel3, 0);
+            this.Controls.SetChildIndex(this.panel4, 0);
+            this.Controls.SetChildIndex(this.panel5, 0);
+            this.Controls.SetChildIndex(this.panel6, 0);
+            this.Controls.SetChildIndex(this.panel7, 0);
+            this.Controls.SetChildIndex(this.panel8, 0);
+            this.Controls.SetChildIndex(this.hmdMarquee2, 0);
+            this.Controls.SetChildIndex(this.hmdButton2, 0);
+            this.Controls.SetChildIndex(this.hmdDataGridView1, 0);
+            this.Controls.SetChildIndex(this.checkBox1, 0);
+            this.Controls.SetChildIndex(this.radioButton1, 0);
             ((System.ComponentModel.ISupportInitialize)(this.hmdDataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -14,16 +14,16 @@ using System.Windows.Forms;
 
 namespace Test
 {
-    public partial class Form1 :Form
+    public partial class Form1 :HMDBaseForm
     {
         public Form1()
         {
             InitializeComponent();
-            this.Icon=  Icons.LightIcon.GetIcon(NormalIconType.alarm_clock, Color.GreenYellow);
+            //this.Icon=  Icons.LightIcon.GetIcon(NormalIconType.alarm_clock, Color.GreenYellow);
         }
         private void hmdButton1_Click(object sender, EventArgs e)
         {
-            //LoadData( setProgress,"nafas");
+            LoadData( setProgress,"nafas");
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -50,15 +50,15 @@ namespace Test
         {
             if (rbRed.Checked)
             {
-                //ThemeColor = HMDControls.ThemeDefine.ThemeColor.Red;
+                ThemeColor = HMDControls.ThemeDefine.ThemeColor.Red;
             }
             if (rbBlue.Checked)
             {
-               // ThemeColor = HMDControls.ThemeDefine.ThemeColor.Blue;
+                ThemeColor = HMDControls.ThemeDefine.ThemeColor.Blue;
             }
             if (rbGreen.Checked)
             {
-               // ThemeColor = HMDControls.ThemeDefine.ThemeColor.Green;
+                ThemeColor = HMDControls.ThemeDefine.ThemeColor.Green;
             }
             panel1.BackColor = Theme.ForeColor;
             panel2.BackColor = Theme.ForeColorAccent;
@@ -75,7 +75,7 @@ namespace Test
         {
             var a = hmdTextbox1.Enabled;
             MessageBox.Show(hmdTextbox1.Text);
-            // var a =(int) LoadData1(4.);
+            //var a =(int) LoadData1(4.);
         }
 
         private void hmdCheckBox1_CheckedChanged(object sender, EventArgs e)

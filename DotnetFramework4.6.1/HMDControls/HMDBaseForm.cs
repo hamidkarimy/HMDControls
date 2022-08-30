@@ -21,35 +21,13 @@ namespace HMDControls
         error,
         ok
     }
-    public partial class HMDBaseForm<T> : Form,IHMDControl where T :class
+    public partial class HMDBaseForm : Form,IHMDControl
 
     { 
         public HMDBaseForm()
         {
             InitializeComponent();           
-        }
-       public bool ValidateModel(T dto) 
-        {
-
-            var context = new ValidationContext(dto);
-
-            var result = new List<ValidationResult>();
-
-            if (!Validator.TryValidateObject(dto, context, result)) {
-                Errors?.Invoke(this, result);
-                return false;
-            }
-
-            //if (!result.Any())
-            //    return true;
-
-            //Errors?.Invoke(this, result);
-            //return false;
-
-            return true;
-        }
-
-        public EventHandler<List<ValidationResult>> Errors { get; set; }
+        }     
 
         ThemeMode mode;
         ThemeColor color;
@@ -249,7 +227,6 @@ namespace HMDControls
                     {
                         hmdMarquee1.StartProgress();
                     }
-                    //((HMDMarquee)control).StartProgress();
                 }
             }
             pictureBox1.Visible = true;
@@ -275,19 +252,10 @@ namespace HMDControls
             Refresh();
             //hmdMarquee1.StartProgress();
         }
-        protected void ChangeWaitingStatus(MessageType messageType, NormalIconType waitIcon,string text)
-        {
-            if (Wait)
-            {
-                MessageType = messageType;
-                WaitingIcon = waitIcon;
-                WaitingText = text;
-            }
-        }
-        protected void LoadData<T>(Action<T> func,T input) where T : class
+        protected void LoadData<T>(Action<T> func, T input) where T : class
         {
             Wait = true;
-            doAction(func,input);
+            doAction(func, input);
         }
         //protected void LoadData1<T1,T2>(Func<T1,T2> func,Action<T2> completedOn=null) 
         //{
@@ -297,9 +265,17 @@ namespace HMDControls
 
         private async void doAction<T>(Action<T> func, T input) where T : class
         {
-           await Task.Run(() => func.Invoke(input));
+            await Task.Run(() => func.Invoke(input));
             Wait = false;
         }
-
+        protected void ChangeWaitingStatus(MessageType messageType, NormalIconType waitIcon,string text)
+        {
+            if (Wait)
+            {
+                MessageType = messageType;
+                WaitingIcon = waitIcon;
+                WaitingText = text;
+            }
+        }
     }
 }
