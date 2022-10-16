@@ -419,6 +419,7 @@ namespace HMDControls.Controls
         protected override void OnTextChanged(EventArgs e)
         {
             base.OnTextChanged(e);
+
            
         }
         public void SetError(string message)
@@ -470,6 +471,10 @@ namespace HMDControls.Controls
                         break;
                 }
             }
+            if (ValueType == TextBoxType.Number)
+            {
+                this.textBox1.RightToLeft= RightToLeft.No;
+            }
         }
         protected override void OnResize(EventArgs e)
         {
@@ -491,6 +496,7 @@ namespace HMDControls.Controls
                 this.Height = textBoxHeight + 12;
             }
             pictureBox1.SizeMode = PictureBoxSizeMode.CenterImage;
+          
             Refresh();
         }
         protected override void OnLoad(EventArgs e)
@@ -516,6 +522,7 @@ namespace HMDControls.Controls
             this.textBox1.Size = new System.Drawing.Size(135, 22);
             this.textBox1.TabIndex = 5;
             this.textBox1.Enter += new System.EventHandler(this.textBox1_Enter);
+            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             this.textBox1.Leave += new System.EventHandler(this.textBox1_Leave);
             // 
             // pictureBox1
@@ -561,6 +568,22 @@ namespace HMDControls.Controls
         private void textBox1_Leave(object sender, EventArgs e)
         {
             setPlaceHolder();  
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (ValueType == TextBoxType.Number)
+            {
+                if ((Text=="" || textBox1.SelectedText==Text) && e.KeyChar == '-')
+                {
+
+                }
+                else
+                {
+                    e.Handled = !(char.IsDigit(e.KeyChar) || e.KeyChar == 8 );
+                }
+                
+            }
         }
     }
 }

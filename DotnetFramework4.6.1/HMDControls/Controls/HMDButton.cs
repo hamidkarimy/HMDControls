@@ -10,7 +10,8 @@ namespace HMDControls.Controls
     {
         ThemeMode mode;
         ThemeColor color;
-        NormalIconType  icon;       
+        NormalIconType  icon;
+        int iconSize = 32;
         public bool Enabled
         {
             get
@@ -99,7 +100,25 @@ namespace HMDControls.Controls
                 StaticHelper.InvokeIfRequired(() =>
                 {
                     icon = value;
-                    Image = Icons.RegularIcon.GetImage(icon, color: Color.White, size: 32);
+                    Image = Icons.RegularIcon.GetImage(icon, color: Color.White, size: IconSize);
+                    Refresh();
+                }, this);
+            }
+        }
+        
+        [Category("Appearance")]
+        [Description("Choose Icon.")]
+        public int IconSize
+        {
+            get
+            {
+                return iconSize;
+            }
+            set
+            {
+                StaticHelper.InvokeIfRequired(() =>
+                {
+                    iconSize = value;
                     Refresh();
                 }, this);
             }

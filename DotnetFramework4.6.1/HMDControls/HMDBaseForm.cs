@@ -63,6 +63,13 @@ namespace HMDControls
             }
 
         }
+        public void DialogResultClose(DialogResult dr)
+        {
+            StaticHelper.InvokeIfRequired(() => {
+                this.DialogResult = dr;
+                this.Close();
+            }, this);
+        }
         bool wait;
         List<Control> controlList;
 
@@ -257,12 +264,21 @@ namespace HMDControls
             Wait = true;
             doAction(func, input);
         }
+        protected void LoadData(Action func) 
+        {
+            Wait = true;
+            doAction(func);
+        }
         //protected void LoadData1<T1,T2>(Func<T1,T2> func,Action<T2> completedOn=null) 
         //{
         //    Wait = true;
         //    doWork(func,completedOn);
         //}
-
+        private async void doAction(Action func) 
+        {
+            await Task.Run(() => func.Invoke());
+            Wait = false;
+        }
         private async void doAction<T>(Action<T> func, T input) where T : class
         {
             await Task.Run(() => func.Invoke(input));
