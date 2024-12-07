@@ -4,16 +4,13 @@
     "net6.0-windows7.0": {
       "HMDControls/1.0.0": {
         "type": "project",
-        "framework": ".NETCoreApp,Version=v6.0",
+        "framework": "Unsupported,Version=v0.0",
         "compile": {
           "bin/placeholder/HMDControls.dll": {}
         },
         "runtime": {
           "bin/placeholder/HMDControls.dll": {}
-        },
-        "frameworkReferences": [
-          "Microsoft.WindowsDesktop.App.WindowsForms"
-        ]
+        }
       }
     }
   },
@@ -30,34 +27,41 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Hamid\\.nuget\\packages\\": {}
+    "C:\\Users\\Hamid\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\GitHub\\HMDControls\\Dotnet6\\HMDTest\\HMDTest.csproj",
+      "projectUniqueName": "C:\\Users\\Hamid\\Documents\\github\\HMDControls\\Dotnet6\\HMDTest\\HMDTest.csproj",
       "projectName": "HMDTest",
-      "projectPath": "D:\\GitHub\\HMDControls\\Dotnet6\\HMDTest\\HMDTest.csproj",
+      "projectPath": "C:\\Users\\Hamid\\Documents\\github\\HMDControls\\Dotnet6\\HMDTest\\HMDTest.csproj",
       "packagesPath": "C:\\Users\\Hamid\\.nuget\\packages\\",
-      "outputPath": "D:\\GitHub\\HMDControls\\Dotnet6\\HMDTest\\obj\\",
+      "outputPath": "C:\\Users\\Hamid\\Documents\\github\\HMDControls\\Dotnet6\\HMDTest\\obj\\",
       "projectStyle": "PackageReference",
+      "UsingMicrosoftNETSdk": false,
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
         "C:\\Users\\Hamid\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "net6.0-windows7.0"
+        "net6.0-windows"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "projectReferences": {
-            "D:\\GitHub\\HMDControls\\Dotnet6\\HMDControls\\HMDControls.csproj": {
-              "projectPath": "D:\\GitHub\\HMDControls\\Dotnet6\\HMDControls\\HMDControls.csproj"
+            "C:\\Users\\Hamid\\Documents\\github\\HMDControls\\Dotnet6\\HMDControls\\HMDControls.csproj": {
+              "projectPath": "C:\\Users\\Hamid\\Documents\\github\\HMDControls\\Dotnet6\\HMDControls\\HMDControls.csproj"
             }
           }
         }
@@ -66,6 +70,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -77,7 +86,8 @@
           "net47",
           "net471",
           "net472",
-          "net48"
+          "net48",
+          "net481"
         ],
         "assetTargetFallback": true,
         "warn": true,
@@ -89,8 +99,19 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.203\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1201",
+      "level": "Error",
+      "message": "Project HMDControls is not compatible with net6.0-windows7.0 (.NETCoreApp,Version=v6.0). Project HMDControls supports: net8.0-windows7.0 (.NETCoreApp,Version=v8.0)",
+      "libraryId": "HMDControls",
+      "targetGraphs": [
+        "net6.0-windows7.0"
+      ]
+    }
+  ]
 }

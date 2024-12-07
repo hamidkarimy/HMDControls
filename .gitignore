@@ -367,3 +367,6 @@ MigrationBackup/
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
 *.txt
+/Dotnet6/HMDControls/obj
+/Dotnet6/HMDControls/obj
+/Dotnet6/HMDControls/.vs

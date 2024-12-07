@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net6.0-windows</TargetFramework>
+    <TargetFramework>net8.0-windows7.0</TargetFramework>
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
@@ -12,9 +12,6 @@
   <ItemGroup>
     <Reference Include="intelika.fontAwesome">
       <HintPath>..\..\..\intelika.fontAwesome\intelika.fontAwesome\bin\Release\netstandard2.0\intelika.fontAwesome.dll</HintPath>
-    </Reference>
-    <Reference Include="WinForm.MaterialIcon">
-      <HintPath>..\..\..\WinForm.MaterialIcon\WinForm.MaterialIcon\bin\Debug\netstandard2.0\WinForm.MaterialIcon.dll</HintPath>
     </Reference>
   </ItemGroup>
 

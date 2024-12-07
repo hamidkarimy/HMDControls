@@ -1,8 +1,18 @@
 {
   "version": 2,
-  "dgSpecHash": "EOyOkp7iujYY/5iZEXA7Sig61jz48Llr0COkgs5fcS0E8OQ/Pbcm+4whggKZkmE0q9Ergz7dC7QcvtGuIdtdWg==",
-  "success": true,
-  "projectFilePath": "D:\\GitHub\\HMDControls\\Dotnet6\\HMDTest\\HMDTest.csproj",
+  "dgSpecHash": "Z1byre6npXM=",
+  "success": false,
+  "projectFilePath": "C:\\Users\\Hamid\\Documents\\github\\HMDControls\\Dotnet6\\HMDTest\\HMDTest.csproj",
   "expectedPackageFiles": [],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1201",
+      "level": "Error",
+      "message": "Project HMDControls is not compatible with net6.0-windows7.0 (.NETCoreApp,Version=v6.0). Project HMDControls supports: net8.0-windows7.0 (.NETCoreApp,Version=v8.0)",
+      "libraryId": "HMDControls",
+      "targetGraphs": [
+        "net6.0-windows7.0"
+      ]
+    }
+  ]
 }

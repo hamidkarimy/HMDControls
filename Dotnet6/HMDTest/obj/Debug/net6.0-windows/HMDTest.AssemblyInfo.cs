@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("HMDTest")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+276721576138940e6eaddd13e5e4deeef048c9db")]
 [assembly: System.Reflection.AssemblyProductAttribute("HMDTest")]
 [assembly: System.Reflection.AssemblyTitleAttribute("HMDTest")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
